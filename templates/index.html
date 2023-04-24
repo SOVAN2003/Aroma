@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<script>
+		// Stop the form resubmission on page refresh
+		if ( window.history.replaceState ) {
+			window.history.replaceState( null, null, window.location.href );
+		}
+	</script>
+	<div class="track_form" style="position: absolute; left:18%; padding-top : 90px; padding-bottom : 90px;">
+		<h2>Search your Track</h2>
+		<form id="track_data" action="/" method="post">
+			<div class="track_details" >
+				<input type="text" name="track_name" autocomplete="off" required>
+				<label style="opacity: 50%;">Track Name</label>
+			</div>
+			<div class="track_details">
+				<input type="text" name="track_artist" autocomplete="off" required>
+				<label style="opacity: 50%;">Track Artist</label>
+			</div>
+			<br><br>
+			<button class="btn" type="submit">Recommend</button>
+		</form>
+	</div>
+
+	<div class="Rock track_form" 
+	     style="position:absolute; left: 52%; top:175px ; background-image: url(../static/rock.jpg)"">
+		
+		<a style = "text-decoration: none; " href="https://open.spotify.com/playlist/37i9dQZF1DWXRqgorJj26U">
+			<h2 style="color: rgb(130, 129, 177);">Rock</h2>
+		</a>
+	</div>
+
+	<div class="Romance track_form" 
+	     style="position:absolute; left: 83%; top:175px ;  background-image: url(../static/romance.jpg) ; opacity: 80%;">
+		 <a style = "text-decoration: none; " href="https://open.spotify.com/playlist/37i9dQZF1DWXb9I5xoXLjp">
+			<h2 style="color: rgb(255, 255, 255);">Romance</h2>
+		</a>
+	</div>
+
+	<div class="Party track_form" 
+	     style="position:absolute; left: 52%; top:350px ; background-image: url(../static/party.jpg) ;">
+		 <a style = "text-decoration: none; " href="https://open.spotify.com/playlist/37i9dQZF1DXa2PvUpywmrr">
+			<h2 style="color: rgb(230, 219, 227);">Party</h2>
+		</a>
+	</div>
+
+	<div class="Rock track_form" 
+	     style="position:absolute; left: 83%; top:350px ; background-image: url(../static/hiphop.jpg) ;">
+		 <a style = "text-decoration: none; " href="https://open.spotify.com/playlist/37i9dQZF1DX48TTZL62Yht">
+			<h2 style="color: rgb(210, 201, 205);">HipHop</h2>
+		</a>
+	</div>
+
+	<div class="Rock track_form" 
+	     style="position:absolute; left: 52%; top:525px; background-image: url(../static/classical.jpg) ;">
+		 <a style = "text-decoration: none; " href="https://open.spotify.com/playlist/37i9dQZF1DWWEJlAGA9gs0">
+			<h2 style="color: rgb(235, 244, 152);">Classical</h2>
+		</a>
+	</div>
+	<div class="Rock track_form" 
+	     style="position:absolute; left: 83%; top:525px ; background-image: url(../static/pop.jpg) ;">
+		 <a style = "text-decoration: none; " href="https://open.spotify.com/playlist/3ZgmfR6lsnCwdffZUan8EA">
+			<h2 style="color: rgb(210, 201, 205);">Pop</h2>
+		</a>
+	</div>
+
+
+
+	{% if error | length > 0 %}
+		<script>alert("{{error}}");</script>
+	{% endif %}
+{% endblock %}
+
