@@ -92,7 +92,7 @@ you enter it a different order. An example has been shown below
 ![img_6.png](static/img_6.png)
 
 Fill the track artist field like this
-`Nicky Romero Krewella`
+`Alan Walker`
 
 After this press the recommend button.
 ![img_1.png](static/result.png)
